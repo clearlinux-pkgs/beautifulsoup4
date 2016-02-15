@@ -4,7 +4,7 @@
 #
 Name     : beautifulsoup4
 Version  : 4.4.1
-Release  : 14
+Release  : 15
 URL      : https://pypi.python.org/packages/source/b/beautifulsoup4/beautifulsoup4-4.4.1.tar.gz
 Source0  : https://pypi.python.org/packages/source/b/beautifulsoup4/beautifulsoup4-4.4.1.tar.gz
 Summary  : Screen-scraping library
