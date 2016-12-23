@@ -4,7 +4,7 @@
 #
 Name     : beautifulsoup4
 Version  : 4.5.1
-Release  : 21
+Release  : 22
 URL      : http://pypi.debian.net/beautifulsoup4/beautifulsoup4-4.5.1.tar.gz
 Source0  : http://pypi.debian.net/beautifulsoup4/beautifulsoup4-4.5.1.tar.gz
 Summary  : Screen-scraping library
