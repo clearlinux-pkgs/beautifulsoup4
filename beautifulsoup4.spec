@@ -4,7 +4,7 @@
 #
 Name     : beautifulsoup4
 Version  : 4.5.1
-Release  : 23
+Release  : 24
 URL      : http://pypi.debian.net/beautifulsoup4/beautifulsoup4-4.5.1.tar.gz
 Source0  : http://pypi.debian.net/beautifulsoup4/beautifulsoup4-4.5.1.tar.gz
 Summary  : Screen-scraping library
@@ -56,11 +56,6 @@ export LANG=C
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
-%check
-export http_proxy=http://127.0.0.1:9/
-export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost,127.0.0.1,0.0.0.0
-pushd py2 ; py.test-2.7 ; popd
 %install
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot}
