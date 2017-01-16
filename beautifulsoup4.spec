@@ -4,7 +4,7 @@
 #
 Name     : beautifulsoup4
 Version  : 4.5.3
-Release  : 25
+Release  : 26
 URL      : http://pypi.debian.net/beautifulsoup4/beautifulsoup4-4.5.3.tar.gz
 Source0  : http://pypi.debian.net/beautifulsoup4/beautifulsoup4-4.5.3.tar.gz
 Summary  : Screen-scraping library
@@ -53,13 +53,15 @@ python components for the beautifulsoup4 package.
 
 %build
 export LANG=C
+export SOURCE_DATE_EPOCH=1484533840
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
+export SOURCE_DATE_EPOCH=1484533840
 rm -rf %{buildroot}
-python2 -tt setup.py build -b py2 install --root=%{buildroot}
-python3 -tt setup.py build -b py3 install --root=%{buildroot}
+python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
+python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
 
 %files
 %defattr(-,root,root,-)
