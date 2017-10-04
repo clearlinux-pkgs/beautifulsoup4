@@ -4,13 +4,14 @@
 #
 Name     : beautifulsoup4
 Version  : 4.6.0
-Release  : 30
+Release  : 31
 URL      : http://pypi.debian.net/beautifulsoup4/beautifulsoup4-4.6.0.tar.gz
 Source0  : http://pypi.debian.net/beautifulsoup4/beautifulsoup4-4.6.0.tar.gz
 Summary  : Screen-scraping library
 Group    : Development/Tools
 License  : MIT
 Requires: beautifulsoup4-legacypython
+Requires: beautifulsoup4-python3
 Requires: beautifulsoup4-python
 Requires: html5lib
 Requires: lxml
@@ -46,6 +47,7 @@ u'bad'
 %package legacypython
 Summary: legacypython components for the beautifulsoup4 package.
 Group: Default
+Requires: python-core
 
 %description legacypython
 legacypython components for the beautifulsoup4 package.
@@ -55,9 +57,19 @@ legacypython components for the beautifulsoup4 package.
 Summary: python components for the beautifulsoup4 package.
 Group: Default
 Requires: beautifulsoup4-legacypython
+Requires: beautifulsoup4-python3
 
 %description python
 python components for the beautifulsoup4 package.
+
+
+%package python3
+Summary: python3 components for the beautifulsoup4 package.
+Group: Default
+Requires: python3-core
+
+%description python3
+python3 components for the beautifulsoup4 package.
 
 
 %prep
@@ -68,12 +80,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1505362913
+export SOURCE_DATE_EPOCH=1507149160
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1505362913
+export SOURCE_DATE_EPOCH=1507149160
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
@@ -89,5 +101,8 @@ echo ----[ mark ]----
 /usr/lib/python2*/*
 
 %files python
+%defattr(-,root,root,-)
+
+%files python3
 %defattr(-,root,root,-)
 /usr/lib/python3*/*
