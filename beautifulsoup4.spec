@@ -4,7 +4,7 @@
 #
 Name     : beautifulsoup4
 Version  : 4.8.2
-Release  : 60
+Release  : 61
 URL      : https://files.pythonhosted.org/packages/52/ba/0e121661f529e7f456e903bf5c4d255b8051d8ce2b5e629c5212efe4c3f1/beautifulsoup4-4.8.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/52/ba/0e121661f529e7f456e903bf5c4d255b8051d8ce2b5e629c5212efe4c3f1/beautifulsoup4-4.8.2.tar.gz
 Summary  : Screen-scraping library
@@ -47,6 +47,7 @@ python components for the beautifulsoup4 package.
 Summary: python3 components for the beautifulsoup4 package.
 Group: Default
 Requires: python3-core
+Provides: pypi(beautifulsoup4)
 
 %description python3
 python3 components for the beautifulsoup4 package.
@@ -61,7 +62,8 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1578178884
+export SOURCE_DATE_EPOCH=1582850132
+# -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
