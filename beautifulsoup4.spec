@@ -4,7 +4,7 @@
 #
 Name     : beautifulsoup4
 Version  : 4.9.2
-Release  : 67
+Release  : 68
 URL      : https://files.pythonhosted.org/packages/91/f5/5be6a47f85552586e750b6939b4f21eb4f1b02ef0d0562f1bc3c5fb0ce78/beautifulsoup4-4.9.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/91/f5/5be6a47f85552586e750b6939b4f21eb4f1b02ef0d0562f1bc3c5fb0ce78/beautifulsoup4-4.9.2.tar.gz
 Summary  : Screen-scraping library
