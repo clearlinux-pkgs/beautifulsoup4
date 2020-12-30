@@ -1,5 +1,6 @@
 # This file contains recursive sources that require this package
 WebTest
 compat-opencv-soname42
+cve-bin-tool
 opencv
 pyquery
