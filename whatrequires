@@ -1,6 +1,7 @@
 # This file contains recursive sources that require this package
 WebTest
-compat-opencv-soname42
+cloudflare
 cve-bin-tool
 opencv
 pyquery
+setuptools-rust
